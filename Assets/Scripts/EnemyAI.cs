@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,12 +10,12 @@ public class EnemyAI : MonoBehaviour
 
   [SerializeField] Transform target;
   // how close to the enemy the player has to be for the enemy to start chasing them
-  [SerializeField] float chaseRange = 5f;
+  [SerializeField] float chaseRange = 10f;
 
   NavMeshAgent navMeshAgent;
   // we want to intialize this as a giant number so the enemy doesn't chase the player right away
   float distanceToTarget = Mathf.Infinity;
-
+  bool isProvoked = false;
   void Start()
   {
     navMeshAgent = GetComponent<NavMeshAgent>();
@@ -25,12 +26,56 @@ public class EnemyAI : MonoBehaviour
     // calculate distance from player(the target) to enemy (this object)
     distanceToTarget = Vector3.Distance(target.position, transform.position);
 
-    // if the distance the player is from enemy is less than the chase range, start chasing the player
-    if (distanceToTarget <= chaseRange)
+    // if the zombie is provoked(by shooting it)
+    if (isProvoked)
     {
-      // each frame move (if in range) by setting the destination of the Nav Mesh Agent to be wherever the player currently is
-      navMeshAgent.SetDestination(target.position);
+      EngageTarget();
     }
 
+    // if the distance the player is from enemy is less than the chase range, start chasing the player
+    else if (distanceToTarget <= chaseRange)
+    {
+      // set to true so even if you leave the chase range, the zombie will still chase you. So once you've entered the chase range at least once, it will keep chasing you
+      isProvoked = true;
+
+    }
+
+  }
+
+  private void EngageTarget()
+  {
+    // stoppingDistance is how far away from it's target the enemy will be once it reaches it's target. So if it is set to 1, the enemy will move towards the target until there is 1 unit of space between it and the target
+    // Since distanceToTarget is the space between the player and enemy and as long asa it is greater than the stoppingDistance, the enemy will engage the player by moving towards it until it reaches the stoppingDistance
+    if (distanceToTarget >= navMeshAgent.stoppingDistance)
+    {
+      ChaseTarget();
+    }
+
+    // If we are close enough to the player, attack them
+    if (distanceToTarget <= navMeshAgent.stoppingDistance)
+    {
+      AttackTarget();
+    }
+  }
+
+  private void ChaseTarget()
+  {
+    // Set the destination of the Nav Mesh Agent to be wherever the player (the target) currently is
+    navMeshAgent.SetDestination(target.position);
+  }
+
+  private void AttackTarget()
+  {
+    Debug.Log(name + " ATTACKS " + target.name);
+  }
+
+
+
+  // this method listens for when this object (an object with this script) is selected
+  void OnDrawGizmosSelected()
+  {
+    Gizmos.color = Color.red;
+    // params: the center of the object, the radius(or range) of how large the sphere will be
+    Gizmos.DrawWireSphere(transform.position, chaseRange);
   }
 }
