@@ -10,7 +10,8 @@ public class Weapon : MonoBehaviour
 
   [SerializeField] float range = 100f;
   [SerializeField] float damage = 30f;
-
+  [SerializeField] ParticleSystem muzzleFlash;
+  [SerializeField] GameObject hitEffect;
 
   void Update()
   {
@@ -24,12 +25,22 @@ public class Weapon : MonoBehaviour
 
   private void Shoot()
   {
+    PlayMuzzleFlash();
+    ProcessRaycast();
+  }
+
+  private void PlayMuzzleFlash()
+  {
+    muzzleFlash.Play();
+  }
+
+  private void ProcessRaycast()
+  {
     RaycastHit hit;
 
     if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
     {
-      Debug.Log("I hit this thing: " + hit.transform.name);
-      // TODO: Add hit effect visual
+      CreateHitImpact(hit);
       EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
       // call a method to decrease enemy health
       // If you shoot something that is not an enemy (doesn't have EnemyHealth script), return to avoid null exception
@@ -41,6 +52,13 @@ public class Weapon : MonoBehaviour
       // If you shoot the sky and get a null exception, just return to avoid triggering the null exception
       return;
     }
+  }
 
+  private void CreateHitImpact(RaycastHit hit)
+  {
+    // you can choose the direction the gameobject is instanitated (like having the explosion go towards the camera) with Quaternion.LookRotation()
+    GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+
+    Destroy(impact, .1f);
   }
 }
