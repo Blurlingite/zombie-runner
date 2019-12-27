@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
   private void EngageTarget()
   {
     // stoppingDistance is how far away from it's target the enemy will be once it reaches it's target. So if it is set to 1, the enemy will move towards the target until there is 1 unit of space between it and the target
-    // Since distanceToTarget is the space between the player and enemy and as long asa it is greater than the stoppingDistance, the enemy will engage the player by moving towards it until it reaches the stoppingDistance
+    // Since distanceToTarget is the space between the player and enemy and as long as it is greater than the stoppingDistance, the enemy will engage the player by moving towards it until it reaches the stoppingDistance
     if (distanceToTarget >= navMeshAgent.stoppingDistance)
     {
       ChaseTarget();
@@ -58,14 +58,25 @@ public class EnemyAI : MonoBehaviour
     }
   }
 
+  // This is where we transition from Idle state to the Move state(animation)
   private void ChaseTarget()
   {
+    // see AttackTarget() for more comments
+    // We set attack animation to false in the case we have just attacked and the player leaves the chase radius. That means we need to move again, which means we can't attack while chasing the player(at least in hand to hand combat)
+    GetComponent<Animator>().SetBool("attack", false);
+
+    // SetTrigger() lets you trigger an animation by it's name or id
+    GetComponent<Animator>().SetTrigger("move");
     // Set the destination of the Nav Mesh Agent to be wherever the player (the target) currently is
     navMeshAgent.SetDestination(target.position);
   }
 
+  // This is where we transition from Move state to the Attack state(animation)
   private void AttackTarget()
   {
+    // activate attack animation, since it's a bool, we use SetBool() which takes in the name of the animation (attack) and true(to activate it in this case) or false(to deactivate it in this case b/c of how we set up the attack animation in the Animator, It only activates the attack animation if the bool is true)
+    GetComponent<Animator>().SetBool("attack", true);
+
     Debug.Log(name + " ATTACKS " + target.name);
   }
 
