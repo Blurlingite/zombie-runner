@@ -76,8 +76,6 @@ public class EnemyAI : MonoBehaviour
   {
     // activate attack animation, since it's a bool, we use SetBool() which takes in the name of the animation (attack) and true(to activate it in this case) or false(to deactivate it in this case b/c of how we set up the attack animation in the Animator, It only activates the attack animation if the bool is true)
     GetComponent<Animator>().SetBool("attack", true);
-
-    Debug.Log(name + " ATTACKS " + target.name);
   }
 
 
