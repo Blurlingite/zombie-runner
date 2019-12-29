@@ -394,6 +394,8 @@ MonoBehaviour:
   fpsCamera: {fileID: 8684587648684067957}
   zoomedOutFOV: 60
   zoomedInFOV: 20
+  zoomOutSensitivity: 2
+  zoomInSensitivity: 0.5
 --- !u!1001 &229109092754110384
 PrefabInstance:
   m_ObjectHideFlags: 0
