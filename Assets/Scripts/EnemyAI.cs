@@ -43,6 +43,11 @@ public class EnemyAI : MonoBehaviour
 
   }
 
+  public void OnDamageTaken()
+  {
+    isProvoked = true;
+  }
+
   private void EngageTarget()
   {
     // rather than using FaceTarget() in ChaseTarget() & AttackTarget(), we can use it once here. As soon as you engage the target, you shoould be facing the target
