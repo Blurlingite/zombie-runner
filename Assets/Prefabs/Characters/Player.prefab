@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459024842}
+  - component: {fileID: 8100500453696414530}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 8684587648684626549}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100500453696414530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459024841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b219183758f4a339d462cf0004ace3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 0
 --- !u!1 &8684587648684133969
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,26 +572,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 459024842}
     m_Modifications:
-    - target: {fileID: 6011492644197473231, guid: 004a709892cdd48eba34b27147753b41,
-        type: 3}
-      propertyPath: fpsCamera
-      value: 
-      objectReference: {fileID: 8684587648684067957}
-    - target: {fileID: 6011492644197473231, guid: 004a709892cdd48eba34b27147753b41,
-        type: 3}
-      propertyPath: fpsController
-      value: 
-      objectReference: {fileID: 8684587648678656945}
-    - target: {fileID: 6141866657577535807, guid: 004a709892cdd48eba34b27147753b41,
-        type: 3}
-      propertyPath: m_Name
-      value: Carbine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6141866657577535807, guid: 004a709892cdd48eba34b27147753b41,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6141866657577833759, guid: 004a709892cdd48eba34b27147753b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,6 +627,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.29
       objectReference: {fileID: 0}
+    - target: {fileID: 6141866657577535807, guid: 004a709892cdd48eba34b27147753b41,
+        type: 3}
+      propertyPath: m_Name
+      value: Carbine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141866657577535807, guid: 004a709892cdd48eba34b27147753b41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011492644197473231, guid: 004a709892cdd48eba34b27147753b41,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 8684587648684067957}
+    - target: {fileID: 6011492644197473231, guid: 004a709892cdd48eba34b27147753b41,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 8684587648678656945}
     - target: {fileID: 6315632095215764864, guid: 004a709892cdd48eba34b27147753b41,
         type: 3}
       propertyPath: FPCamera
