@@ -14,6 +14,12 @@ public class WeaponZoom : MonoBehaviour
 
   bool zoomedInToggle = false;
 
+  void OnDisable()
+  {
+    // when you leave the weapon (b/c OnDisable() runs when the object this script is attached to is disabled), zoom out
+    // this fixes the bug where you zoom in and switch to a different weapon and are still zoomed in
+    ZoomOut();
+  }
 
   void Update()
   {
@@ -22,21 +28,30 @@ public class WeaponZoom : MonoBehaviour
     {
       if (zoomedInToggle == false)
       {
-        zoomedInToggle = true;
-        fpsCamera.fieldOfView = zoomedInFOV;
-        fpsController.mouseLook.XSensitivity = zoomInSensitivity;
-        fpsController.mouseLook.YSensitivity = zoomInSensitivity;
+        ZoomIn();
       }
       else
       {
-        zoomedInToggle = false;
-        fpsCamera.fieldOfView = zoomedOutFOV;
-        fpsController.mouseLook.XSensitivity = zoomOutSensitivity;
-        fpsController.mouseLook.YSensitivity = zoomOutSensitivity;
+        ZoomOut();
       }
     }
   }
 
+  private void ZoomIn()
+  {
+    zoomedInToggle = true;
+    fpsCamera.fieldOfView = zoomedInFOV;
+    fpsController.mouseLook.XSensitivity = zoomInSensitivity;
+    fpsController.mouseLook.YSensitivity = zoomInSensitivity;
+  }
+
+  private void ZoomOut()
+  {
+    zoomedInToggle = false;
+    fpsCamera.fieldOfView = zoomedOutFOV;
+    fpsController.mouseLook.XSensitivity = zoomOutSensitivity;
+    fpsController.mouseLook.YSensitivity = zoomOutSensitivity;
+  }
 
 
 }

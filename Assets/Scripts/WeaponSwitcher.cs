@@ -7,6 +7,8 @@ public class WeaponSwitcher : MonoBehaviour
 {
   [SerializeField] int currentWeapon = 0;
 
+
+
   void Start()
   {
     SetWeaponActive();
@@ -51,7 +53,7 @@ public class WeaponSwitcher : MonoBehaviour
   {
     // access the axis the scroll wheel belongs to
     // if you scroll upwards
-    if (Input.GetAxis("Mouse ScollWheel") > 0)
+    if (Input.GetAxis("Mouse ScollWheel") < 0)
     {
       // if we are at the maximum, go back to 0
       if (currentWeapon >= transform.childCount - 1)
@@ -65,7 +67,7 @@ public class WeaponSwitcher : MonoBehaviour
     }
 
     // if you scroll downwards
-    if (Input.GetAxis("Mouse ScrollWheel") < 0)
+    if (Input.GetAxis("Mouse ScrollWheel") > 0)
     {
       // if we are at the maximum, go back to 0
       if (currentWeapon <= 0)
