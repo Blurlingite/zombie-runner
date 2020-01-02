@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-
   [SerializeField] Transform target;
   // how close to the enemy the player has to be for the enemy to start chasing them
   [SerializeField] float chaseRange = 10f;
@@ -17,13 +16,24 @@ public class EnemyAI : MonoBehaviour
   // we want to intialize this as a giant number so the enemy doesn't chase the player right away
   float distanceToTarget = Mathf.Infinity;
   bool isProvoked = false;
+  EnemyHealth health;
+
   void Start()
   {
     navMeshAgent = GetComponent<NavMeshAgent>();
+    health = GetComponent<EnemyHealth>();
+
   }
 
   void Update()
   {
+    if (health.IsDead())
+    {
+      // disable this script so enemy can't move
+      this.enabled = false;
+      // also need to disable nav mesh agent b/c it will still keep calculating and running when active 
+      navMeshAgent.enabled = false;
+    }
     // calculate distance from player(the target) to enemy (this object)
     distanceToTarget = Vector3.Distance(target.position, transform.position);
 
