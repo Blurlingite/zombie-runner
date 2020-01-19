@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-  [SerializeField] Transform target;
   // how close to the enemy the player has to be for the enemy to start chasing them
   [SerializeField] float chaseRange = 10f;
   [SerializeField] float turnSpeed = 5f;
@@ -16,12 +15,15 @@ public class EnemyAI : MonoBehaviour
   // we want to intialize this as a giant number so the enemy doesn't chase the player right away
   float distanceToTarget = Mathf.Infinity;
   bool isProvoked = false;
+  Transform target;
   EnemyHealth health;
 
   void Start()
   {
     navMeshAgent = GetComponent<NavMeshAgent>();
     health = GetComponent<EnemyHealth>();
+
+    target = FindObjectOfType<PlayerHealth>().transform;
 
   }
 
