@@ -36,22 +36,29 @@ public class EnemyAI : MonoBehaviour
       // also need to disable nav mesh agent b/c it will still keep calculating and running when active 
       navMeshAgent.enabled = false;
     }
-    // calculate distance from player(the target) to enemy (this object)
-    distanceToTarget = Vector3.Distance(target.position, transform.position);
 
-    // if the zombie is provoked(by shooting it)
-    if (isProvoked)
+    // this else statement prevents the SetDestination error from happening, since SetDestination() was still being called even though we disabled the nav mesh agent in the above if statement. If SetDestination() is called while the nav mesh agent is disabled, you will get that error.
+    else
     {
-      EngageTarget();
+      // calculate distance from player(the target) to enemy (this object)
+      distanceToTarget = Vector3.Distance(target.position, transform.position);
+
+      // if the zombie is provoked(by shooting it)
+      if (isProvoked)
+      {
+        EngageTarget();
+      }
+
+      // if the distance the player is from enemy is less than the chase range, start chasing the player
+      else if (distanceToTarget <= chaseRange)
+      {
+        // set to true so even if you leave the chase range, the zombie will still chase you. So once you've entered the chase range at least once, it will keep chasing you
+        isProvoked = true;
+
+      }
     }
 
-    // if the distance the player is from enemy is less than the chase range, start chasing the player
-    else if (distanceToTarget <= chaseRange)
-    {
-      // set to true so even if you leave the chase range, the zombie will still chase you. So once you've entered the chase range at least once, it will keep chasing you
-      isProvoked = true;
 
-    }
 
   }
 

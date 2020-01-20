@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 842970140}
   - component: {fileID: 1591372783}
   - component: {fileID: 335595837}
+  - component: {fileID: 246373650203287560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -397,6 +398,20 @@ MonoBehaviour:
     ammoAmount: 20
   - ammoType: 2
     ammoAmount: 8
+--- !u!114 &246373650203287560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684587648684133971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e050533800214851af7de90d942dcd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactCanvas: {fileID: 0}
+  impactTime: 0.3
 --- !u!1001 &686036941720701063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,11 +504,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8684587648684626549}
     m_Modifications:
-    - target: {fileID: 1405737422406309403, guid: d9772d41e03c8429b8245adb2c6ad3a2,
-        type: 3}
-      propertyPath: m_Name
-      value: Flashlight
-      objectReference: {fileID: 0}
     - target: {fileID: 1471055984943097046, guid: d9772d41e03c8429b8245adb2c6ad3a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -548,6 +558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405737422406309403, guid: d9772d41e03c8429b8245adb2c6ad3a2,
+        type: 3}
+      propertyPath: m_Name
+      value: Flashlight
       objectReference: {fileID: 0}
     - target: {fileID: 4028862527695822055, guid: d9772d41e03c8429b8245adb2c6ad3a2,
         type: 3}
