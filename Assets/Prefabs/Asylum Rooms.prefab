@@ -931,11 +931,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985797134154295166}
     m_Modifications:
-    - target: {fileID: 7434044041632969414, guid: 0d7c4c20ee28243229ef1df8f706d913,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 2 Props
-      objectReference: {fileID: 0}
     - target: {fileID: 7434044041632969415, guid: 0d7c4c20ee28243229ef1df8f706d913,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -991,6 +986,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7434044041632969414, guid: 0d7c4c20ee28243229ef1df8f706d913,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 2 Props
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d7c4c20ee28243229ef1df8f706d913, type: 3}
 --- !u!1001 &3937381197888998357
@@ -1000,11 +1000,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985797134154295166}
     m_Modifications:
-    - target: {fileID: 4996665343638814193, guid: 8739f2aea27fe4ac7b2471d8d1a961b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 3 Props
-      objectReference: {fileID: 0}
     - target: {fileID: 4996665343638814192, guid: 8739f2aea27fe4ac7b2471d8d1a961b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,6 +1055,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4996665343638814193, guid: 8739f2aea27fe4ac7b2471d8d1a961b0,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 3 Props
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8739f2aea27fe4ac7b2471d8d1a961b0, type: 3}
 --- !u!1001 &4548770808434165558
@@ -1069,11 +1069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985797134154295166}
     m_Modifications:
-    - target: {fileID: 5535945448126647912, guid: cd6c43112a93d49e680328ed34586c9d,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 4 Props
-      objectReference: {fileID: 0}
     - target: {fileID: 5535945448126647913, guid: cd6c43112a93d49e680328ed34586c9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1129,6 +1124,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5535945448126647912, guid: cd6c43112a93d49e680328ed34586c9d,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 4 Props
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6c43112a93d49e680328ed34586c9d, type: 3}
 --- !u!1001 &6570011731181262862
@@ -1138,11 +1138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985797134154295166}
     m_Modifications:
-    - target: {fileID: 2944937589748163016, guid: 0e20428fe637e46f38b1904543676b33,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 1 Props
-      objectReference: {fileID: 0}
     - target: {fileID: 2944937589748163017, guid: 0e20428fe637e46f38b1904543676b33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1197,6 +1192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944937589748163016, guid: 0e20428fe637e46f38b1904543676b33,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 1 Props
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e20428fe637e46f38b1904543676b33, type: 3}
@@ -3090,7 +3090,7 @@ PrefabInstance:
     - target: {fileID: 471338700169192912, guid: a64622ae6bd8841568ae722ed7a926ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 48.5
+      value: 49.16
       objectReference: {fileID: 0}
     - target: {fileID: 471338700169192912, guid: a64622ae6bd8841568ae722ed7a926ef,
         type: 3}
