@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Asylum.unity
     guid: e39313c54382f45ee81ff1fa02f71698
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: 3bc6586fa1b8f485095519c17f955823
+  - enabled: 1
+    path: Assets/Scenes/Controls_Scene.unity
+    guid: f7fc0fcd28afd458b984fc334f4ea303
   m_configObjects: {}
