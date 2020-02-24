@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Weapons_Scene.unity
     guid: 9566b81ad53f740129c0472d849aee4e
+  - enabled: 1
+    path: Assets/Scenes/Pickups_Scene.unity
+    guid: 35daf709261064e45ad540cf635cd34d
   m_configObjects: {}
