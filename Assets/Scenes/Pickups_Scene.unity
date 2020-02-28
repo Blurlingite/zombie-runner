@@ -479,5 +479,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5044822608932450774, guid: 512b3c43e98a94d6d9b0a079b7b7b920,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 578.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044822608932450773, guid: 512b3c43e98a94d6d9b0a079b7b7b920,
+        type: 3}
+      propertyPath: m_Name
+      value: Background_IMG
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044822608932450773, guid: 512b3c43e98a94d6d9b0a079b7b7b920,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 512b3c43e98a94d6d9b0a079b7b7b920, type: 3}
