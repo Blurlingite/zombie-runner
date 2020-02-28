@@ -586,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032194658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -709,6 +709,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6392465496846021131, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392465496846021131, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392465496846021131, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 425595938, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -756,6 +771,29 @@ PrefabInstance:
     - target: {fileID: 2038205978, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 425595937, guid: af3cbe53173424e28be02430af59298e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 66.51999
+      objectReference: {fileID: 0}
+    - target: {fileID: 425595937, guid: af3cbe53173424e28be02430af59298e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36.640015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392465496846021130, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392465496846021130, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2032194660}
+    - target: {fileID: 6392465496846021133, guid: af3cbe53173424e28be02430af59298e,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3cbe53173424e28be02430af59298e, type: 3}
