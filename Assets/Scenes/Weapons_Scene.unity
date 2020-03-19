@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 578.1
       objectReference: {fileID: 0}
+    - target: {fileID: 425595936, guid: af3cbe53173424e28be02430af59298e, type: 3}
+      propertyPath: m_Name
+      value: Controls_Button
+      objectReference: {fileID: 0}
     - target: {fileID: 1514182989, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 114.5
@@ -306,10 +310,6 @@ PrefabInstance:
     - target: {fileID: 243418633, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_Name
       value: Carbine_Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 425595936, guid: af3cbe53173424e28be02430af59298e, type: 3}
-      propertyPath: m_Name
-      value: Controls_Button
       objectReference: {fileID: 0}
     - target: {fileID: 846863870, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_Name
@@ -350,6 +350,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 41867354a84924f2daa0b23a0c2ce247,
         type: 3}
+    - target: {fileID: 1037388060, guid: af3cbe53173424e28be02430af59298e, type: 3}
+      propertyPath: m_Text
+      value: Controls
+      objectReference: {fileID: 0}
     - target: {fileID: 1053588961, guid: af3cbe53173424e28be02430af59298e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -373,10 +377,6 @@ PrefabInstance:
       value: 'WEAPONS
 
 '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037388060, guid: af3cbe53173424e28be02430af59298e, type: 3}
-      propertyPath: m_Text
-      value: Controls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3cbe53173424e28be02430af59298e, type: 3}
@@ -404,6 +404,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 165206441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &165206445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165206442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d813db08ae3534383974209b6c30c7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &395152739
 GameObject:
   m_ObjectHideFlags: 0
